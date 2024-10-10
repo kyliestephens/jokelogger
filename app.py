@@ -15,5 +15,9 @@ setup = response['setup']
 
 punchline = response['punchline']
 
-print(id, setup, punchline)
+#print(id, setup, punchline)
+
+logger = logging.getLogger(__name__)
+logging.basicConfig(filename="joke.log", endoing="utf-8", level=logging.DEBUG)
+logging.warning('%s:%s:%s:', id, setup, punchline)
 
